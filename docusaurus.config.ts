@@ -3,8 +3,8 @@ import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
 
 const config: Config = {
-  title: "Cashu-TS Docs",
-  tagline: "A TypeScript library for building Cashu wallets",
+  title: "Cashu Mint Docs",
+  tagline: "Best Practices for Cashu Mints",
   favicon: "img/favicon.ico",
   plugins: [
     async function myPlugin(context, options) {
@@ -20,10 +20,10 @@ const config: Config = {
   ],
 
   url: "https://cashubtc.github.io/",
-  baseUrl: "/cashu-ts-docs/",
+  baseUrl: "/cashu-mintdocs/",
 
   organizationName: "cashubtc",
-  projectName: "cashu-ts-docs",
+  projectName: "cashu-mint-docs",
 
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
@@ -51,10 +51,10 @@ const config: Config = {
     // Replace with your project's social card
     image: "img/docusaurus-social-card.jpg",
     navbar: {
-      title: "Cashu TS",
+      title: "Cashu Mint Documentation",
       logo: {
-        alt: "Cashu-TS Logo",
-        src: "img/tslogo.png",
+        alt: "Cashu-Mint Logo",
+        src: "img/cashume.png",
       },
       items: [
         {
@@ -64,7 +64,7 @@ const config: Config = {
           label: "Docs",
         },
         {
-          href: 'https://github.com/cashubtc/cashu-ts',
+          href: 'https://github.com/cashubtc/',
           label: 'GitHub',
           position: 'right',
         },

@@ -4,12 +4,10 @@ import Layout from "@theme/Layout";
 import { useEffect, useRef } from "react";
 import { createNoise3D } from "simplex-noise";
 import { useColorMode } from "@docusaurus/theme-common";
-import cashuLogo from "@site/static/img/Cashume.png";
-import tsLogo from "@site/static/img/tslogo.png";
-import npubcashLogo from "@site/static/img/npubcash.png";
 import bwcLogo from "@site/static/img/bwc.png";
 import vpnstrLogo from "@site/static/img/vpnstr.png";
 import ndklogo from "@site/static/img/NDK.png";
+import CashuLogo from "@site/static/img/Cashume.png";
 
 function HomeContent(): JSX.Element {
   const { colorMode } = useColorMode();
@@ -71,7 +69,7 @@ function HomeContent(): JSX.Element {
     const simplex = createNoise3D();
 
     const logoImage = new Image();
-    logoImage.src = cashuLogo;
+    logoImage.src = CashuLogo;
     const logoSize = 16;
     let logoParticleIndex = 0;
 
@@ -312,7 +310,7 @@ function HomeContent(): JSX.Element {
                 className={`absolute -z-1 blur-3xl opacity-30 animate-pulse 
                 bg-gradient-to-r 
                 ${
-                  colorMode === "dark"
+                  colorMode === "dark" 
                     ? "from-purple-600/20 via-pink-500/20 to-blue-600/20"
                     : "from-purple-400/30 via-pink-300/30 to-blue-400/30"
                 } 
@@ -323,20 +321,20 @@ function HomeContent(): JSX.Element {
                 className={`text-4xl md:text-8xl font-extrabold mb-6 
                 ${colorMode === "dark" ? "text-white" : "text-gray-900"}`}
               >
-                <span className="mono-text">Cashu TS</span>
+                <span className="mono-text">Cashu Mint</span>
               </h1>
 
               <h2
                 className={`text-2xl md:text-4xl font-dm-mono 
                 ${colorMode === "dark" ? "text-zinc-50" : "text-zinc-800"} tracking-tight`}
               >
-                A powerful toolkit for{" "}
+                Guide for {" "}
                 <span
                   className={
                     colorMode === "dark" ? "text-purple-400" : "text-purple-600"
                   }
                 >
-                  Cashu development
+                  Cashu mint deployment
                 </span>
                 .
               </h2>
@@ -346,7 +344,7 @@ function HomeContent(): JSX.Element {
                 ${colorMode === "dark" ? "text-zinc-400" : "text-zinc-600"} 
                 mt-8 max-w-2xl leading-relaxed`}
               >
-                Build secure, scalable Cashu applications with confidence.
+               Guide and best practices for Cashu mint deployment and monitoring.
                 <br className="hidden md:block" />
                 We handle complexity, you ship.
               </p>
@@ -373,14 +371,14 @@ function HomeContent(): JSX.Element {
                     colorMode === "dark" ? "text-purple-300" : "text-purple-700"
                   }
                 >
-                  ${" "}
+                  {/* ${" "} */}
                 </code>
                 <code
                   className={
                     colorMode === "dark" ? "text-zinc-100" : "text-zinc-700"
                   }
                 >
-                  npm i @cashu/cashu-ts
+                
                 </code>
               </pre>
             </div>
@@ -396,7 +394,7 @@ function HomeContent(): JSX.Element {
                   border border-purple-600/20"
                 href={docsLink}
               >
-                <span className="text-white">Start Building</span>
+                <span className="text-white">Deploy Your Mint</span>
                 <svg
                   className="w-5 h-5 text-white transition-transform duration-300 group-hover:translate-x-1"
                   fill="none"
@@ -428,13 +426,13 @@ function HomeContent(): JSX.Element {
                     className={`text-4xl font-extrabold block mb-4
                     ${colorMode === "dark" ? "text-white" : "text-gray-900"}`}
                   >
-                    Made with Cashu TS
+                    Mints and Resources
                   </span>
                   <span
                     className={`text-2xl block max-w-3xl mx-auto
                     ${colorMode === "dark" ? "text-zinc-400" : "text-gray-600"}`}
                   >
-                    Simplifying the process of building Cashu applications.
+                    
                   </span>
                 </h2>
 
@@ -459,8 +457,8 @@ function HomeContent(): JSX.Element {
                     <div className="flex items-center gap-4 mb-4">
                       <div className="w-10 h-10 flex items-center justify-center">
                         <img
-                          src={cashuLogo}
-                          alt="Cashu.me logo"
+                          src={CashuLogo}
+                          alt="nutshell logo"
                           className="w-8 h-8 object-contain"
                         />
                       </div>
@@ -468,16 +466,14 @@ function HomeContent(): JSX.Element {
                         className={`text-xl font-semibold 
                         ${colorMode === "dark" ? "text-white" : "text-gray-900"}`}
                       >
-                        Cashu.me
+                      Nutshell
                       </h3>
                     </div>
                     <p
                       className={`text-sm leading-relaxed
                       ${colorMode === "dark" ? "text-gray-400" : "text-gray-600"}`}
                     >
-                      A modern web wallet built with Quasar and Vue.js,
-                      leveraging TypeScript for enhanced reliability. Experience
-                      seamless eCash transactions in a user-friendly interface.
+                      Python mint.
                     </p>
                   </div>
 
@@ -510,16 +506,14 @@ function HomeContent(): JSX.Element {
                         className={`text-xl font-semibold 
                         ${colorMode === "dark" ? "text-white" : "text-gray-900"}`}
                       >
-                        VPNSTR
+                        CDK Mintd
                       </h3>
                     </div>
                     <p
                       className={`text-sm leading-relaxed
                       ${colorMode === "dark" ? "text-gray-400" : "text-gray-600"}`}
                     >
-                      A privacy-focused VPN service accepting Bitcoin Lightning
-                      and Cashu payments. Designed for users who prioritize
-                      anonymity and secure internet access.
+                     Rust mint
                     </p>
                   </div>
 
@@ -552,17 +546,14 @@ function HomeContent(): JSX.Element {
                         className={`text-xl font-semibold 
                         ${colorMode === "dark" ? "text-white" : "text-gray-900"}`}
                       >
-                        NostrDevKit (NDK)
+                       GoNuts
                       </h3>
                     </div>
                     <p
                       className={`text-sm leading-relaxed
                       ${colorMode === "dark" ? "text-gray-400" : "text-gray-600"}`}
                     >
-                      A comprehensive development kit for building Nostr
-                      applications. NDK simplifies the creation of relays,
-                      clients, and other Nostr-based solutions with robust
-                      tooling.
+                      Go mint
                     </p>
                   </div>
 
@@ -595,21 +586,19 @@ function HomeContent(): JSX.Element {
                         className={`text-xl font-semibold 
                         ${colorMode === "dark" ? "text-white" : "text-gray-900"}`}
                       >
-                        Boardwalk Cash
+                        Nutmix
                       </h3>
                     </div>
                     <p
                       className={`text-sm leading-relaxed
                       ${colorMode === "dark" ? "text-gray-400" : "text-gray-600"}`}
                     >
-                      A dollar-based CashuBTC wallet integrating Bitcoin and
-                      Nostr. Offering a seamless experience for managing digital
-                      cash with built-in social features.
+                     Go mint
                     </p>
                   </div>
 
-                  {/* Npubcash */}
-                  <div
+                {/*  */}
+                  {/* <div
                     className={`flex flex-col h-full p-4 md:p-8 rounded-lg 
                     ${
                       colorMode === "dark"
@@ -648,7 +637,7 @@ function HomeContent(): JSX.Element {
                       tokens for received payments, enabling seamless
                       offline-to-online transaction experiences.
                     </p>
-                  </div>
+                  </div> */} 
                 </div>
               </div>
             </div>
@@ -670,15 +659,15 @@ function HomeContent(): JSX.Element {
                   <div className="flex items-start">
                     <div className="flex items-center gap-4">
                       <img
-                        src={tsLogo}
-                        alt="TypeScript Logo"
+                        src={CashuLogo}
+                        alt="Cashu Logo"
                         className="w-8 h-8 md:w-12 md:h-12"
                       />
                       <span
                         className={`text-2xl md:text-3xl font-bold 
                         ${colorMode === "dark" ? "text-white" : "text-gray-900"}`}
                       >
-                        Cashu TS
+                        Cashu Mint
                       </span>
                     </div>
                   </div>
@@ -693,7 +682,7 @@ function HomeContent(): JSX.Element {
                     </h3>
                     <div className="flex flex-col space-y-2">
                       <a
-                        href="https://matrix.to/#/#cashu-ts:matrix.cashu.space"
+                        href="https://matrix.to/#/#nutshell:matrix.cashu.space"
                         className={`${colorMode === "dark" ? "text-zinc-400" : "text-gray-600"} 
                         hover:text-purple-500 transition-colors`}
                         target="_blank"
