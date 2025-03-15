@@ -3,7 +3,7 @@ sidebar_position: 2
 ---
 # Getting Started
 
-## This guide is currently a generic best practice document that applies across most of the existing mint implementations. 
+This guide is currently a generic best practice document that applies across most of the existing mint implementations. 
 
 
 ## Knowledge Requirements

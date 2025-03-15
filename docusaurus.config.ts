@@ -19,10 +19,10 @@ const config: Config = {
     },
   ],
 
-  url: "https://cashubtc.github.io/",
-  baseUrl: "/cashu-mintdocs/",
+  url: "https://findingsov.github.io/",
+  baseUrl: "/cashu-mint-docs/",
 
-  organizationName: "cashubtc",
+  organizationName: "findingsov",
   projectName: "cashu-mint-docs",
 
   onBrokenLinks: "throw",
