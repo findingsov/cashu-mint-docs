@@ -51,7 +51,7 @@ const config: Config = {
     // Replace with your project's social card
     image: "img/docusaurus-social-card.jpg",
     navbar: {
-      title: "Cashu Mint Documentation",
+      title: "Cashu Mint Best Practices Documentation",
       logo: {
         alt: "Cashu-Mint Logo",
         src: "img/Cashume.png",
