@@ -3,7 +3,7 @@ import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
 
 const config: Config = {
-  title: "Cashu Mint Docs",
+  title: "Cashu Mint Docs Best Practices",
   tagline: "Best Practices for Cashu Mints",
   favicon: "img/favicon.ico",
   plugins: [
@@ -54,7 +54,7 @@ const config: Config = {
       title: "Cashu Mint Documentation",
       logo: {
         alt: "Cashu-Mint Logo",
-        src: "img/cashume.png",
+        src: "img/Cashume.png",
       },
       items: [
         {
