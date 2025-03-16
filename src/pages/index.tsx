@@ -321,7 +321,7 @@ function HomeContent(): JSX.Element {
                 className={`text-4xl md:text-8xl font-extrabold mb-6 
                 ${colorMode === "dark" ? "text-white" : "text-gray-900"}`}
               >
-                <span className="mono-text">Cashu Mint</span>
+                <span className="mono-text">Cashu Mints</span>
               </h1>
 
               <h2
@@ -334,7 +334,7 @@ function HomeContent(): JSX.Element {
                     colorMode === "dark" ? "text-purple-400" : "text-purple-600"
                   }
                 >
-                  Cashu mint deployment
+                  Best Practices in Cashu mint deployment
                 </span>
                 .
               </h2>
@@ -346,7 +346,7 @@ function HomeContent(): JSX.Element {
               >
                Guide and best practices for Cashu mint deployment and monitoring.
                 <br className="hidden md:block" />
-                We handle complexity, you ship.
+                {/* We handle complexity, you ship. */}
               </p>
             </div>
 
