@@ -7,7 +7,7 @@ import { useColorMode } from "@docusaurus/theme-common";
 import bwcLogo from "@site/static/img/bwc.png";
 import vpnstrLogo from "@site/static/img/vpnstr.png";
 import ndklogo from "@site/static/img/NDK.png";
-import CashuLogo from "@site/static/img/Cashume.png";
+import CashuLogo from "@site/static/img/cashu-no-bg.png";
 
 function HomeContent(): JSX.Element {
   const { colorMode } = useColorMode();
@@ -344,9 +344,10 @@ function HomeContent(): JSX.Element {
                 ${colorMode === "dark" ? "text-zinc-400" : "text-zinc-600"} 
                 mt-8 max-w-2xl leading-relaxed`}
               >
-               Guide and best practices for Cashu mint deployment and monitoring.
+                  Best practices for Cashu mint.
                 <br className="hidden md:block" />
-                {/* We handle complexity, you ship. */}
+                Setup, Deployment, Backups, Security, Monitoring
+          
               </p>
             </div>
 
@@ -437,7 +438,7 @@ function HomeContent(): JSX.Element {
                 </h2>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto mt-16">
-                  {/* Cashu.me */}
+                  {/*  Nutshell */}
                   <div
                     className={`flex flex-col h-full p-4 md:p-8 rounded-lg 
                     ${
@@ -458,7 +459,7 @@ function HomeContent(): JSX.Element {
                       <div className="w-10 h-10 flex items-center justify-center">
                         <img
                           src={CashuLogo}
-                          alt="nutshell logo"
+                          alt="Nutshell logo"
                           className="w-8 h-8 object-contain"
                         />
                       </div>
@@ -477,7 +478,7 @@ function HomeContent(): JSX.Element {
                     </p>
                   </div>
 
-                  {/* VPNSTR */}
+                  {/* CDK Mint */}
                   <div
                     className={`flex flex-col h-full p-4 md:p-8 rounded-lg 
                     ${
@@ -494,11 +495,11 @@ function HomeContent(): JSX.Element {
                     }
                     hover:transform hover:scale-[1.02]`}
                   >
-                    <div className="flex items-center gap-4 mb-4">
+                    <div className="flex items-center  gap-4 mb-4">
                       <div className="w-10 h-10 flex items-center justify-center">
                         <img
-                          src={vpnstrLogo}
-                          alt="VPNSTR logo"
+                          src={CashuLogo}
+                          alt="CDK Mint"
                           className="w-8 h-8 object-contain"
                         />
                       </div>
@@ -506,7 +507,7 @@ function HomeContent(): JSX.Element {
                         className={`text-xl font-semibold 
                         ${colorMode === "dark" ? "text-white" : "text-gray-900"}`}
                       >
-                        CDK Mintd
+                        CDK Mint
                       </h3>
                     </div>
                     <p
@@ -517,7 +518,7 @@ function HomeContent(): JSX.Element {
                     </p>
                   </div>
 
-                  {/* NostrDevKit */}
+                  {/* GoNuts */}
                   <div
                     className={`flex flex-col h-full p-4 md:p-8 rounded-lg 
                     ${
@@ -537,8 +538,8 @@ function HomeContent(): JSX.Element {
                     <div className="flex items-center gap-4 mb-4">
                       <div className="w-10 h-10 flex items-center justify-center">
                         <img
-                          src={ndklogo}
-                          alt="NDK logo"
+                          src={CashuLogo}
+                          alt=""
                           className="w-8 h-8 object-contain"
                         />
                       </div>
@@ -557,7 +558,7 @@ function HomeContent(): JSX.Element {
                     </p>
                   </div>
 
-                  {/* Boardwalk Cash */}
+                  {/* Nutmix */}
                   <div
                     className={`flex flex-col h-full p-4 md:p-8 rounded-lg 
                     ${
@@ -577,8 +578,8 @@ function HomeContent(): JSX.Element {
                     <div className="flex items-center gap-4 mb-4">
                       <div className="w-10 h-10 flex items-center justify-center">
                         <img
-                          src={bwcLogo}
-                          alt="Boardwalk Cash logo"
+                          src={CashuLogo}
+                          alt=""
                           className="w-8 h-8 object-contain"
                         />
                       </div>
