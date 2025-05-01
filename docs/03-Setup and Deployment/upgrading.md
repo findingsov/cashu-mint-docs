@@ -6,3 +6,5 @@ sidebar_position: 9
 Most mints are releaseing new features and features regularly.
 
 Update your mints as new releases are released.
+
+You need to make sure that you upgrade with the lowest downtime possible.
