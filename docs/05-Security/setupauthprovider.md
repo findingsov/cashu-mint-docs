@@ -1,7 +1,39 @@
 ---
 sidebar_position: 5
 ---
-# (Coming Soon) Set Up Auth Provider on Separate Server
+# Set Up Auth and Auth Provider 
+
+## Configure Mint for Auth
+
+Make sure your mint configuration is set up for auth. In your .env or config.toml file, you need to make sure the URL for discovery is set correclty for your realm name.
+
+config.toml
+```
+# [auth]
+# openid_discovery = "http://127.0.0.1:8080/realms/cdk/.well-known/openid-configuration"
+# openid_client_id = "cashu-client"
+# mint_max_bat=50
+# enabled_mint=true
+# enabled_melt=true
+# enabled_swap=true
+# enabled_check_mint_quote=true
+# enabled_check_melt_quote=true
+# enabled_restore=true
+```
+nutshell .env file
+```
+# Turn on authentication
+# MINT_REQUIRE_AUTH=TRUE
+# OpenID Connect discovery URL of the authentication provider
+# MINT_AUTH_OICD_DISCOVERY_URL=http://localhost:8080/realms/nutshell/.well-known/openid-configuration
+# MINT_AUTH_OICD_CLIENT_ID=cashu-client
+# Number of authentication attempts allowed per minute per user
+# MINT_AUTH_RATE_LIMIT_PER_MINUTE=5
+# Maximum number of blind auth tokens per authentication request
+# MINT_AUTH_MAX_BLIND_TOKENS=100
+```
+
+## Auth Provider Setup
 
 The best practice is to set up your auth provider on a separate server (or even cluster of servers).
 
@@ -17,8 +49,10 @@ The OIDC service must be setup as follows:
 
 ## Keycloak Setup
 
-Set up .env file with passwords, etc.
+### Set up and Deploy
+1. For the docker-compose.yml file and .env file in your keycloak folder.
 
+Set up .env file with passwords, etc.
 ```
 POSTGRES_DB="keycloakdb"
 POSTGRES_USER="keycloakadmin"
@@ -31,7 +65,7 @@ KC_HOSTNAME_PORT=8080
 KC_HOSTNAME_URL="<url>"
 ```
 
-Edit the provided docker-compose.yml for any additional setup you may need (add vars to .env file), such as:
+2. Edit the provided docker-compose.yml for any additional setup you may need (add vars to .env file), such as:
 ```
 KC_HOSTNAME_ADMIN_URL=""
 KC_HOSTNAME_URL=""
@@ -40,27 +74,33 @@ KC_CORS_ORIGINS: "*"
 KC_CORS_ALLOW_METHODS: "GET,POST,OPTIONS,PUT,DELETE"
 ```
 
-From the keycloak directory:
+3. From the keycloak directory:
 ```
 sudo docker-compose up -d
 docker ps
 ```
 
-## Keycloak Setup
+To stop:
+```
+sudo docker-compose down
+```
 
-For KeyCloak:
-1. Keycloak - Create realm for mint. e.g., nutshell
-2. Keycloak Steps to Make Public, Enable Authorization Code Flow with PKCE (Minimal Configuration)
-Under your realm
-a. Go to the Keycloak Admin Console → Clients → select (or create) your client.
-b. Under the Settings tab:
-        *  Client Authentication=No, or Access Type: set to Public (this automatically ensures no client secret is used).
-        * Standard Flow Enabled: ON (this is the authorization code flow).
-        * Implicit Flow Enabled: OFF (unless you explicitly need the Implicit Flow).
-        * Direct Access Grants Enabled: OFF (unless you want users to authenticate via resource owner password credentials).
-        * Service Accounts Enabled: OFF (this is for confidential clients needing a service account).
-        * Device Authetication Grant : On
-c. In newer Keycloak versions, under Advanced Settings (or similar), find Proof Key for Code Exchange or PKCE Policy:
-        * Set PKCE to Required and RS256.
-        * “RS256” is the recommended secure hashing method.
-d. Click Save.
+## Keycloak Admin Setup
+
+### Realm and Client Setup
+Access the Keycloak Admin Console:
+1. Click the Keycloak drop-down in upper left, and Create Realm for mint. e.g., nutshell, cdk  
+2. Select Clients and set Client type=OpenID Connect and Client ID = cashu-client 
+3. Set up:
+* Client Authentication= OFF, or Access Type: set to Public (this automatically ensures no client secret is used).
+* Standard Flow Enabled: ON (this is the authorization code flow).
+* Implicit Flow Enabled: OFF (unless you explicitly need the Implicit Flow).
+* Direct Access Grants Enabled: OFF (unless you want users to authenticate via resource owner password credentials).
+* Service Accounts Enabled: OFF (this is for confidential clients needing a service account).
+* Device Authetication Grant : ON
+4. For Web-based clients, provide proper root, home, and redirect URLs. Set a redirect URL of http://localhost:33388/callback.
+
+
+### User Setup
+
+Your user needs to login in order to authenticate, so you need to define users and their initial passwords.

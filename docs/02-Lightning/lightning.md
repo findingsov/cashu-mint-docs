@@ -9,7 +9,7 @@ To mint (create) and melt (destroy) ecash, you need to plug your mint into a Lig
 
 ## Best Practice: Run Your Own Lightning Node
  The best practice is to run your own dedicated Lightning node, such as LND or CLN. Running a Lightning node comes with its own responsibilities. 
-    *  make sure that you properly back up your seed phrase
+    * make sure that you properly back up your seed phrase
     * regularly export your static channel backups, 
     * ideally, have a copy of your node's database in case of a catastrophic incident. 
 
