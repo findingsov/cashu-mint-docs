@@ -88,8 +88,6 @@ To stop:
 sudo docker-compose down
 ```
 
-## Keycloak Admin Setup
-
 ### Realm and Client Setup
 Access the Keycloak Admin Console at the Keycloak admin URL:
 1. Click the Keycloak drop-down in upper left, and Create Realm for the mint. e.g., nutshell, cdk  
