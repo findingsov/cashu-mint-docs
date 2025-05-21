@@ -64,7 +64,7 @@ const config: Config = {
           label: "Docs",
         },
         {
-          href: 'https://github.com/cashubtc/',
+          href: 'https://github.com/findingsov/cashu-mint-docs',
           label: 'GitHub',
           position: 'right',
         },
