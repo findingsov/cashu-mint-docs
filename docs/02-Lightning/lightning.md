@@ -15,7 +15,7 @@ To mint (create) and melt (destroy) ecash, you need to plug your mint into a Lig
 
 These are all things that apply to Lightning nodes, with or without ecash. You should be aware of these things whenever you run a Lightning node. This will help to assume your setup is safe and you have enough experience keeping your node happy and alive.
 
-*Note* : Best practice to run teh lightning node on a separate server from the mint.
+*Note* : Best practice is to run the lightning node on a separate server from the mint.
 
 ## Other Custodial Backends
 Mints also work with custodial backends. This is great for getting started quickly, to experiment or to run a mint for a temporary event, such as a conference. Supported custodial back-ends may include a Strike or Blink account, or use of an LNbits wallet of your choice to hook it up to a  mint.
