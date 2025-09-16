@@ -19,9 +19,10 @@ Note: We are currently developing mint management that enables keyset rotation a
 Currently, to rotate to a new keyset in Nutshell (version 0.15.3 as of this writing), you increment the derivation path in the config of the mint and restart it. 
 
 To rotate keysets, there are currently two steps:
-1. You would change the derivation from m/0'/0'/0' to m/0'/0'/1' to rotate to the new keyset. 
-
-2. To prevent minting of ecash from an old keyset, you also need to set that keyset inactive.  Currently, this is only possible manually by finding the keyset in the mint's database, and marking the column active as false. 
+1. Increment your derivation set. For example, you would change the derivation from m/0'/0'/0' to m/0'/0'/1' to rotate to the new keyset.
+2. Restart the mint.  You should now see the new keyset. 
+3. To prevent minting of ecash from an old keyset, you also need to set that keyset inactive.  Currently, this is only possible manually by finding the keyset in the mint's database, and marking the column active=False. 
+4. Restart the mint.
 
 Now, only ecash from the new epoch (m/0'/0'/1') will be allowed to be minted and all ecash from the old epoch (m/0'/0'/0') will be slowly taken out of circulation. 
 
